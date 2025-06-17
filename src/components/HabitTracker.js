@@ -558,7 +558,7 @@ export class HabitTracker {
         const deleteIndicators = document.querySelectorAll('.delete-indicator');
         deleteIndicators.forEach(indicator => {
             indicator.style.display = isRemoveMode ? 'block' : 'none';
-        });
+        }); 
     }
 
     async removeHabit(index) {
