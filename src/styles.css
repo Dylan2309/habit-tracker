@@ -59,7 +59,7 @@
     border-bottom: 1px solid #ddd;
 }
 
-/* Remove border from last item */
+
 .habit-column > div:last-child,
 .habit-column > input:last-child,
 .dates-column > div:last-child {
@@ -80,7 +80,6 @@
     cursor: pointer;
 }
 
-/* Match spending input spacing exactly */
 .spending-input {
     width: 60px;
     padding: 5px;
@@ -149,14 +148,13 @@
     display: none;
 }
 
-/* Style the time inputs to be more compact */
+
 .sleep-time-input {
     width: 70px;
     font-size: 0.9em;
     text-align: center;
 }
 
-/* Add hover effect for the chart points */
 .sleep-chart:hover {
     cursor: pointer;
 } 

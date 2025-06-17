@@ -40,7 +40,7 @@ export class HabitTracker {
         this.monthlyStatsModal = document.getElementById('monthlyStatsModal');
         this.closeStatsModal = document.getElementById('closeStatsModal');
         
-        // Set initial values
+        // Set values
         this.monthSelect.value = this.calendar.getMonth();
         this.yearInput.value = this.calendar.getYear();
         
@@ -175,7 +175,7 @@ export class HabitTracker {
             const dateRow = document.createElement('div');
             dateRow.className = 'date-row';
             
-            // Check if this is today's date
+            // Check today's date
             if (date.date.toDateString() === today.toDateString()) {
                 dateRow.classList.add('current-date');
             }
@@ -212,7 +212,7 @@ export class HabitTracker {
                 dateRow.appendChild(checkbox);
             });
             
-            // Add spending input
+            // Add spending
             const spendingInput = document.createElement('input');
             spendingInput.type = 'number';
             spendingInput.className = 'spending-input';
@@ -227,7 +227,7 @@ export class HabitTracker {
             });
             dateRow.appendChild(spendingInput);
             
-            // Add sleep input
+            // Add sleep
             const sleepInput = document.createElement('input');
             sleepInput.type = 'number';
             sleepInput.className = 'sleep-input';
@@ -256,7 +256,7 @@ export class HabitTracker {
             return;
         }
         
-        // Create modal for habit selection
+        // habit selection
         const modal = document.createElement('div');
         modal.className = 'habit-modal';
         modal.innerHTML = `
@@ -300,7 +300,7 @@ export class HabitTracker {
                 habitName = customHabitInput.value.trim();
                 if (!habitName) {
                     customHabitInput.focus();
-                    return; // Don't close modal if custom input is empty
+                    return; 
                 }
             } else {
                 habitName = habitSelect.value;
@@ -313,7 +313,6 @@ export class HabitTracker {
             document.body.removeChild(modal);
         });
         
-        // Handle cancellation
         cancelBtn.addEventListener('click', () => {
             document.body.removeChild(modal);
         });
@@ -348,7 +347,7 @@ export class HabitTracker {
         this.addHabitBtn.style.display = this.isEditMode ? 'block' : 'none';
         this.removeHabitBtn.style.display = this.isEditMode ? 'block' : 'none';
         
-        // Update add button state
+        // Update add button
         if (this.isEditMode) {
             this.updateAddButtonState();
         }
@@ -481,14 +480,14 @@ export class HabitTracker {
             });
         });
         
-        // Calculate total spending
+        // total spending
         let totalSpending = 0;
         relevantDates.forEach(date => {
             const dateString = date.date.toISOString().split('T')[0];
             totalSpending += this.habitManager.getDailySpending(dateString) || 0;
         });
         
-        // Calculate average sleep
+        // average sleep
         let totalSleep = 0;
         let sleepDays = 0;
         relevantDates.forEach(date => {
@@ -558,7 +557,7 @@ export class HabitTracker {
         const deleteIndicators = document.querySelectorAll('.delete-indicator');
         deleteIndicators.forEach(indicator => {
             indicator.style.display = isRemoveMode ? 'block' : 'none';
-        }); 
+        });
     }
 
     async removeHabit(index) {
