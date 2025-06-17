@@ -1,6 +1,6 @@
 # Habit Tracker
 
-A simple and intuitive habit tracking application that helps you monitor your daily habits, spending, and sleep patterns.
+A simple habit tracking application that helps you monitor your daily habits, spending, and sleep patterns.
 
 ## Features
 
@@ -102,7 +102,6 @@ habit-tracker/
 ├── package.json      # Project configuration
 └── index.html        # Main application window
 ```
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+ 
+ # Notes
+ - Note this README file is AI Generated
