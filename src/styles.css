@@ -1,0 +1,162 @@
+.calendar-grid {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    background: white;
+}
+
+.dates-column {
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.date-item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.date-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 120px;
+}
+
+.payday-star {
+    color: #ffd700;
+    font-size: 1.2em;
+}
+
+.habits-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.habit-column {
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for all items in columns */
+.habit-column > div,
+.habit-column > input,
+.dates-column > div {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Remove border from last item */
+.habit-column > div:last-child,
+.habit-column > input:last-child,
+.dates-column > div:last-child {
+    border-bottom: none;
+}
+
+.habit-header {
+    margin-bottom: 5px;
+    border-bottom: none !important;
+    font-weight: bold;
+    color: #333;
+}
+
+.habit-checkbox {
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Match spending input spacing exactly */
+.spending-input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: right;
+    margin: 10px;
+    height: 20px;
+}
+
+.sleep-column {
+    min-width: 100px;
+}
+
+.sleep-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.edit-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #666;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.edit-button:hover {
+    background-color: #f0f0f0;
+    color: #4a90e2;
+}
+
+.sleep-container {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.sleep-input {
+    display: none;
+}
+
+.sleep-column.edit-mode .sleep-input {
+    display: inline-block;
+}
+
+.sleep-chart {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    background-color: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.sleep-column.edit-mode .sleep-chart {
+    display: none;
+}
+
+/* Style the time inputs to be more compact */
+.sleep-time-input {
+    width: 70px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* Add hover effect for the chart points */
+.sleep-chart:hover {
+    cursor: pointer;
+} 

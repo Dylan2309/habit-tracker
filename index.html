@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="header-content">
+                <h1>Habit Tracker</h1>
+                <div class="month-selector edit-only">
+                    <select id="monthSelect">
+                        <option value="0">January</option>
+                        <option value="1">February</option>
+                        <option value="2">March</option>
+                        <option value="3">April</option>
+                        <option value="4">May</option>
+                        <option value="5">June</option>
+                        <option value="6">July</option>
+                        <option value="7">August</option>
+                        <option value="8">September</option>
+                        <option value="9">October</option>
+                        <option value="10">November</option>
+                        <option value="11">December</option>
+                    </select>
+                    <input type="number" id="yearInput" min="2000" max="2100">
+                </div>
+            </div>
+            <div class="controls">
+                <button id="addHabitBtn">Add Habit</button>
+                <button id="removeHabitBtn">Remove Habit</button>
+                <button id="editModeBtn">Edit Mode</button>
+                <button id="monthlyStatsBtn">Monthly Stats</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="habits-container">
+                <div id="habitsList"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Monthly Stats Modal -->
+    <div id="monthlyStatsModal" class="modal">
+        <div class="modal-content">
+            <h2>Monthly Statistics</h2>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <h3>Habit Completion</h3>
+                    <div id="habitCompletionStats"></div>
+                </div>
+                <div class="stat-item">
+                    <h3>Monthly Spending</h3>
+                    <div id="monthlySpendingStats"></div>
+                </div>
+                <div class="stat-item">
+                    <h3>Average Sleep</h3>
+                    <div id="averageSleepStats"></div>
+                </div>
+            </div>
+            <button id="closeStatsModal" class="close-button">Close</button>
+        </div>
+    </div>
+
+    <script src="./src/index.js" type="module"></script>
+</body>
+</html> 
